@@ -6,7 +6,7 @@ Esta es una aplicacion que puede calcular el presupuesto de una persona en base 
 **Thiego Véliz**
 
 ## Ver ejemplo en vivo
-- [https://undertaker-gt.github.io/Calculadora/]
+- [ https://undertaker-gt.github.io/Aplicacion-presupuesto/ ]
 
 ## Instalación 
 Este proyecto no necesita de instalacion. Simplemente abre la carperta o haz doble click en el .html
