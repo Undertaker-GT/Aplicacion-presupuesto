@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacion Presupuesto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body onload="cargarApp()">
+    <header class="cabecero">
+        <section class="presupuesto">
+            <article class="presupuesto_titulo">Presupuesto Disponible</article>
+            <article class="presupuesto_valor" id="PresupuestoTotal">+ 2,000.00 </article>
+
+            <section class="presupuesto_ingreso limpiarEstilos">
+                <article class="presupuesto_ingreso--texto">Ingresos</article>
+                <section class="derecha">
+                    <article class="presupuesto_ingreso--valor" id="IngresosTotal">+4,000.00</article>
+                    <article class="presupuesto_ingreso--porcentaje"></article>
+                </section>
+            </section>
+
+            <section class="presupuesto_egreso limpiarEstilos">
+                <article class="presupuesto_egreso--texto">Egresos</article>
+                <section class="derecha">
+                    <article class="presupuesto_egreso--valor" id="EgresosTotales">-1,900.00</article>
+                    <article class="presupuesto_egreso--porcentaje" id="Porcentaje">12%</article>
+                </section>      
+            </section>
+
+        </section>
+    </header>
+
+    <form id="forma" onsubmit="return false;">
+<!-- el metodo onsubmit="return false sirve para que no se haga el envio de este formulario al servidor, si no que unicamente 
+se procece el metodo onclick  -->
+        <section class="agregar">
+            <section class="agregar_contenedor">
+                <select class="agregar_tipo" id="tipo">
+                    <option value="ingreso" selected>+</option>
+                    <option value="egreso">-</option>
+                </select>
+                <input type="text"class="agregar_descripcion" placeholder="Agregar Descripcion" id="descripcion">
+                <input type="number" class="agregar_valor" placeholder="Valor" id="valor" step="any"> 
+                <!-- step='any' sirve para agregar punto decimal -->
+                <button class="agregar_btn" onclick="agregarDato()">
+                    <ion-icon name="checkbox-outline"></ion-icon>
+                </button>
+            </section>
+        </section>
+    </form>
+
+
+    <section class="contenedor limpiarEstilos">
+        <section class="ingreso">
+            <h2 class="ingreso_titulo">Ingresos</h2>
+            <section id="listaIngresos">
+
+            </section>
+        </section>
+
+        <section class="egreso">
+            <h2 class="egreso_titulo">Egresos</h2>
+            <section id="listaEgresos">
+
+            </section>
+        </section>
+    </section>
+
+
+
+
+
+    <script src="javaScript/Dato.js"></script>
+    <script src="javaScript/Ingreso.js"></script>
+    <script src="javaScript/Egreso.js"></script>
+    <script  src="javaScript/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
